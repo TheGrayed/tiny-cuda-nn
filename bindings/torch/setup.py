@@ -62,8 +62,8 @@ if os.name == "nt":
 	def find_cl_path():
 		import glob
 		for executable in ["Program Files (x86)", "Program Files"]:
-			for edition in ["Enterprise", "Professional", "BuildTools", "Community"]:
-				paths = sorted(glob.glob(f"D:\\{executable}\\Microsoft Visual Studio\\*\\{edition}\\VC\\Tools\\MSVC\\*\\bin\\Hostx64\\x64"), reverse=True)
+			for edition in ["Enterprise", "Professional", "BuildTools", "Community", "Preview"]:
+                paths = sorted(glob.glob(f"D:\\{executable}\\Microsoft Visual Studio\\*\\{edition}\\VC\\Tools\\MSVC\\*\\bin\\Hostx64\\x64"), reverse=True)
 				if paths:
 					return paths[0]
 
